@@ -28,6 +28,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'batsy-1410.herokuapp.com']
 SECRET_KEY = os.environ.get('SECRET_KEY')
+
+SECRET_KEY = 'nk5*30&)bq=)6_s**9koa+-+=_ao1$5y$n9zbp&d-0p!rtxmg9'
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
