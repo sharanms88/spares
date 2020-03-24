@@ -1,3 +1,4 @@
 numpy==1.16.3
 Django==3.0.1
 dj_database_url==0.5.0
+gunicorn==19.9.0
