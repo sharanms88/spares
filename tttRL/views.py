@@ -23,8 +23,8 @@ def create(request, **kwargs):
 		game_id, created_at = str(uuid.uuid4()), datetime.datetime.now()
 	params = dict(request.POST)
 	board_dimension = params['board_dimension'] if 'board_dimension' in params else [DEFAUT_BOARD_DIMENSION]
-	# game = Games(id=game_id, ts=created_at, game_state='IN_PROGRESS', dimension=int(board_dimension[0]))
-	# game.save()
+	game = Games(id=game_id, ts=created_at, game_state='IN_PROGRESS', dimension=int(board_dimension[0]))
+	game.save()
 	response_data = {
 		'game_id' : game_id,
 		'ts' : created_at
