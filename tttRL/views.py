@@ -24,7 +24,7 @@ def create(request, **kwargs):
 	params = dict(request.POST)
 	board_dimension = params['board_dimension'] if 'board_dimension' in params else [DEFAUT_BOARD_DIMENSION]
 	game = Games(id=game_id, ts=created_at, game_state='IN_PROGRESS', dimension=int(board_dimension[0]))
-	game.save()
+	# game.save()
 	response_data = {
 		'game_id' : game_id,
 		'ts' : created_at
