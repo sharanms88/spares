@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
+from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
 import datetime
 import uuid
@@ -12,7 +13,8 @@ from .players import *
 
 @csrf_exempt 
 def index(request):
-    return HttpResponse("Hello, Sharan")
+	template = loader.get_template('home.html')
+	return HttpResponse(template.render({}, request))
 
 @csrf_exempt 
 def create(request, **kwargs):
